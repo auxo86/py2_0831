@@ -2,6 +2,9 @@
 import Tkinter
 from tkFont import Font
 
+# 利用selector來抓取radiobutton的值
+# 因為variable=selector
+
 def func1():
     label.config(text='button%d selected' % selector.get())
 # def func2():
