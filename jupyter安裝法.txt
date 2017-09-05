@@ -1,0 +1,26 @@
+﻿先安裝python
+安裝vcforpython27
+pip install ipython[notebook]
+mkdir notebook
+cd notebook
+jupyter-notebook
+jupyter-notebook --generate-config
+cd ../.jupyter
+編輯jupyter_notebook_config
+在最上面加入
+
+'''
+c = get_config()
+c.NotebookApp.ip = '*'
+c.NotebookApp.open_browser = True
+c.NotebookApp.port = 7654
+c.NotebookApp.notebook_dir = 'C:\\Users\\user\\notebook'
+import webbrowser
+
+webbrowser.register('chrome', None,
+	webbrowser.GenericBrowser('C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'))
+c.NotebookApp.browser = 'Chrome'
+
+'''
+存檔
+重新回到Notebook下面跑jupyter-notebook

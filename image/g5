@@ -1,0 +1,7 @@
+graph {
+	A [label=Apple]
+	A -- B [label="Summer fruit"]
+	A -- C [label="Sour flaver"]
+	B -- C [label="Yellow like"]
+	B -- D
+}

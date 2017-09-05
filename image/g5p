@@ -1,0 +1,10 @@
+graph {
+	graph [bgcolor="#FFAAFF" fillcolor="#AA66AA" fontcolor="#442200" fontsize=24 label="我的圖形" rankdir=TB]
+	node [color=white fillcolor="#66AAAA" fontcolor="#00FF00" fontname=Consolas shape=box style=filled]
+	edge [arrowhead=open color="#004488" fontcolor="#440088" fontname=Courier fontsize=16 style=dotted]
+	A [label=Apple]
+	A -- B [label="Summer fruit"]
+	A -- C [label="Sour flaver"]
+	B -- C [label="Yellow like"]
+	B -- D
+}
