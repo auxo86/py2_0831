@@ -28,8 +28,8 @@ list2 = [('A', 'B'), ('A', 'C'), ('B', 'C'), ('B', 'D'), ('B', 'E')]
 add_edges(add_nodes(g3, list1), list2).render('image/g3')
 add_edges(add_nodes(g4, list1), list2).render('image/g4')
 g5 = graph()
-list3 = [(('A'), {'label':'Apple'}), (('B'), {'label':'Banana'}),
-         (('C'), {'label':'Citron'}), ('D', {})]
+list3 = [('A', {'label':'Apple'}), ('B', {'label':'Banana'}),
+         ('C', {'label':'Citron'}), ('D', {})]
 
 list4 = [(('A', 'B'), {'label':'Summer fruit'}),
          (('A', 'C'), {'label': 'Sour flaver'}),
@@ -41,7 +41,7 @@ add_edges(add_nodes(g5, list3), list4).render('image/g5')
 styles = {
     'graph':{
         'label':u'我的圖形',
-        'fontsize':24,
+        'fontsize':'24',
         'fontcolor':'#442200',
         'bgcolor':'#FFAAFF',
         'rankdir':'TB',
@@ -49,7 +49,7 @@ styles = {
     },
     'nodes':{
         'fontname': 'Consolas',
-        'shape': 'Rectangle',
+        'shape': 'box',
         'fontcolor':'#00FF00',
         'color':'white',
         'style':'filled',
@@ -60,7 +60,7 @@ styles = {
         'color':'#004488',
         'arrowhead':'open',
         'fontname':'Courier',
-        'fontsize':16,
+        'fontsize':'16',
         'fontcolor':'#440088'
     }
 }
@@ -71,4 +71,4 @@ def apply_style(graph, styles):
     graph.edge_attr.update(('edges' in styles and styles['edges']) or {})
     return graph
 g5 = apply_style(g5, styles)
-g5.render(filename='image/g5p')
+g5.render('image/g5p')
