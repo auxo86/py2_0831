@@ -2,6 +2,7 @@
 import graphviz as gv
 import functools
 
+# 把gv.Graph這個函式的format參數固定為'svg'
 graph = functools.partial(gv.Graph, format='svg')
 digraph = functools.partial(gv.Digraph, format='svg')
 
